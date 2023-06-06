@@ -72,15 +72,20 @@ const Weeks = ({ dob, expectancy }) => {
   const createWeeks = () => {
     console.group("Weeks.createWeeks()");
     let weeks = [];
+    let lastIndex;
     console.log("totalWeeks:", totalWeeks);
     for (let i = 0; i <= totalWeeks; i++) {
+      if (i % 52 === 0) {
+        weeks[i] = [];
+        lastIndex = i;
+      }
       console.log("In loop. i:", i);
       if (i <= weeksLived) {
         console.log("lived=true, i=", i);
-        weeks.push({ lived: true });
+        weeks[lastIndex].push({ lived: true });
       } else {
         console.log("lived=false, i=", i);
-        weeks.push({ lived: false });
+        weeks[lastIndex].push({ lived: false });
       }
     }
     console.log("Out of loop");
@@ -93,16 +98,18 @@ const Weeks = ({ dob, expectancy }) => {
     <div className="Weeks">
       {weeks
         ? weeks.map((w, i) => {
-            if (i % 52 == 0) {
-              return (
-                <>
-                  <br />
-                  <Week lived={w.lived}></Week>
-                </>
-              );
-            } else {
-              return <Week lived={w.lived}></Week>;
-            }
+            return (
+              <>
+                <div className="Row" key={"" + i}>
+                  <span className="Year">{i / 52}</span>
+                  {w.map((ww, ii) => {
+                    return (
+                      <Week lived={ww.lived} key={"" + i + "" + ii}></Week>
+                    );
+                  })}
+                </div>
+              </>
+            );
           })
         : "Weeks undefined"}
     </div>

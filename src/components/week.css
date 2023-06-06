@@ -15,6 +15,7 @@
   margin: 1px;
   background-color: lightgray;
   display: inline-block;
+  border-radius: 2px;
 }
 
 .Week--state-lived {
@@ -22,4 +23,17 @@
 }
 
 .Weeks {
+  margin: 0;
+  padding: 0;
+}
+
+.Row {
+  margin: 2px;
+  height: min-content;
+  text-align: left;
+}
+
+.Year {
+  font-size: 10px;
+  margin-right: 10px;
 }
