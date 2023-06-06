@@ -9,3 +9,14 @@
  * -----
  * Copyright 2021  - 2023 Matthieu LEPERLIER, Nomad Solutions
  */
+import React, { useState } from "react";
+
+const Year = ({ dob, expectancy }) => {
+  const [weeksLived, setWeeksLived] = useState();
+
+  const calculateWeeks = (dob, expectancy) => {
+    let d1 = new Date(dob).getHours();
+  };
+
+  return <div></div>;
+};

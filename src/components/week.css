@@ -1,0 +1,25 @@
+/*
+ * File: week.css
+ * Project: memento-mori-react
+ * File Created: Tuesday, 6th June 2023 11:49:05 am
+ * Author: Matthieu LEPERLIER (m.leperlier42@gmail.com)
+ * -----
+ * Last Modified: Tuesday, 6th June 2023 11:49:05 am
+ * Modified By: Matthieu LEPERLIER (m.leperlier42@gmail.com>)
+ * -----
+ * Copyright 2021  - 2023 Matthieu LEPERLIER, Nomad Solutions
+ */
+.Week {
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  background-color: lightgray;
+  display: inline-block;
+}
+
+.Week--state-lived {
+  background-color: lime;
+}
+
+.Weeks {
+}

@@ -1,3 +1,5 @@
+import { Weeks } from "./week";
+
 /*
  * File: layout.js
  * Project: memento-mori-react
@@ -9,3 +11,12 @@
  * -----
  * Copyright 2021  - 2023 Matthieu LEPERLIER, Nomad Solutions
  */
+const Layout = () => {
+  return (
+    <div className="App">
+      <Weeks dob="05-02-1995" expectancy={80}></Weeks>
+    </div>
+  );
+};
+
+export default Layout;
