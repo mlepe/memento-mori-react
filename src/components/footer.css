@@ -1,0 +1,15 @@
+/*
+ * File: footer.css
+ * Project: memento-mori-react
+ * File Created: Thursday, 8th June 2023 9:06:20 pm
+ * Author: Matthieu LEPERLIER (m.leperlier42@gmail.com)
+ * -----
+ * Last Modified: Thursday, 8th June 2023 9:06:21 pm
+ * Modified By: Matthieu LEPERLIER (m.leperlier42@gmail.com>)
+ * -----
+ * Copyright 2021  - 2023 Matthieu LEPERLIER, Nomad Solutions
+ */
+.Footer {
+  margin: 100px;
+  padding: 100px;
+}

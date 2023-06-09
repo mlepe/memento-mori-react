@@ -9,3 +9,20 @@
  * -----
  * Copyright 2021  - 2023 Matthieu LEPERLIER, Nomad Solutions
  */
+import React from "react";
+import { getYear } from "date-fns";
+import "./footer.css";
+
+const Footer = () => {
+  return (
+    <div className="Footer">
+      <span>
+        Made by Matthieu Leperlier{" "}
+        <a href="https://github.com/mlepe">(@mlepe)</a> (c){" "}
+        {getYear(new Date())}
+      </span>
+    </div>
+  );
+};
+
+export default Footer;
