@@ -35,7 +35,7 @@ const Weeks = ({ dob, expectancy }) => {
     calculateWeeksLived(dob);
     calculateWeeksToLive();
     console.groupEnd();
-  }, []);
+  }, [dob, expectancy]);
 
   useEffect(() => {
     createWeeks();
