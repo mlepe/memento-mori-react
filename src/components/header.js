@@ -9,3 +9,16 @@
  * -----
  * Copyright 2021  - 2023 Matthieu LEPERLIER, Nomad Solutions
  */
+import React from "react";
+import "./header.css";
+
+const Header = () => {
+  return (
+    <div className="Header">
+      <h1 className="Header__title">Memento Mori</h1>
+      <h2 className="Header__subtitle">Your life in weeks</h2>
+    </div>
+  );
+};
+
+export default Header;

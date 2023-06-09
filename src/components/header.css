@@ -1,0 +1,26 @@
+/*
+ * File: header.css
+ * Project: memento-mori-react
+ * File Created: Thursday, 8th June 2023 1:01:41 pm
+ * Author: Matthieu LEPERLIER (m.leperlier42@gmail.com)
+ * -----
+ * Last Modified: Thursday, 8th June 2023 1:01:41 pm
+ * Modified By: Matthieu LEPERLIER (m.leperlier42@gmail.com>)
+ * -----
+ * Copyright 2021  - 2023 Matthieu LEPERLIER, Nomad Solutions
+ */
+
+.Header {
+  text-align: center;
+}
+
+.Header__title {
+  font-size: 4em !important;
+  font-weight: bold !important;
+}
+
+.Header__subtitle {
+  font-size: 2em;
+  color: lightgray;
+  margin-bottom: 50px;
+}
