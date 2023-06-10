@@ -15,16 +15,18 @@ import { Weeks } from "./week";
 import Header from "./header";
 import Footer from "./footer";
 import "./layout.css";
-import { useEffect } from "react";
+
 const Layout = () => {
   const [dob, setDob] = useState();
-  const [expectancy, setExpectancy] = useState("80");
+  const [expectancy, setExpectancy] = useState(80);
+  /*const [formSubmitted, setFormSubmitted] = useState();*/
 
   const getDob = (e) => {
     console.group("Layout.getDob()");
     let val = e;
     setDob(val);
     console.log("setDob to:", val);
+    //if (!expectancy) setExpectancy(80);
     console.groupEnd();
   };
 
@@ -35,6 +37,12 @@ const Layout = () => {
     console.log("setExpectancy to:", val);
     console.groupEnd();
   };
+
+  /*const submitForm = (e) => {
+    e.preventDefault();
+    //expectancy ?? setExpectancy(80);
+    setFormSubmitted(true);
+  };*/
 
   return (
     <div className="App">
@@ -47,7 +55,8 @@ const Layout = () => {
           <input
             name="dobInput"
             type="date"
-            onChange={(e) => getDob(e.target.value)}
+            onBlur={(e) => getDob(e.target.value)}
+            required
           ></input>
         </div>
         <hr />
@@ -59,14 +68,23 @@ const Layout = () => {
             name="expectancyInput"
             type="number"
             min="0"
-            //defaultValue="80"
+            defaultValue="80"
             max="120"
-            //onLoad={(e) => getExpectancy(e.target.value)}
             onChange={(e) => getExpectancy(e.target.value)}
           ></input>
         </div>
+        {/* <div className="Form__input">
+          <button
+            className="Form__submit"
+            name="submit"
+            type="submit"
+            onClick={submitForm}
+          >
+            Submit
+          </button>
+        </div> */}
       </form>
-      {dob && <Weeks dob={dob} expectancy={expectancy}></Weeks>}
+      <Weeks dob={dob} expectancy={expectancy}></Weeks>
       {/* <Weeks dob="05-02-1995" expectancy={80}></Weeks> */}
       <Footer></Footer>
     </div>
