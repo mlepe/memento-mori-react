@@ -99,16 +99,14 @@ const Weeks = ({ dob, expectancy }) => {
       {weeks
         ? weeks.map((w, i) => {
             return (
-              <>
-                <div className="Row" key={"" + i}>
-                  <span className="Year">{i / 52}</span>
-                  {w.map((ww, ii) => {
-                    return (
-                      <Week lived={ww.lived} key={"" + i + "" + ii}></Week>
-                    );
-                  })}
-                </div>
-              </>
+              <div className="Row" key={"row_" + i}>
+                <span className="Year" key={"year_" + i}>
+                  {i / 52}
+                </span>
+                {w.map((ww, ii) => {
+                  return <Week lived={ww.lived} key={"week_" + ii}></Week>;
+                })}
+              </div>
             );
           })
         : "Weeks undefined"}
